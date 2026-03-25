@@ -1,5 +1,5 @@
 {
-  "id": "byteplus-modelark",
+  "id": "@encircleacity2/byteplus-modelark",
   "providers": ["byteplus-modelark", "byteplus-modelark-plan"],
   "providerAuthEnvVars": {
     "byteplus-modelark": ["BYTEPLUS_API_KEY"]

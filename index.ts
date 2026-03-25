@@ -4,10 +4,11 @@ import { ensureModelAllowlistEntry } from "openclaw/plugin-sdk/provider-onboard"
 import { buildBytePlusCodingProvider, buildBytePlusProvider } from "./provider-catalog.js";
 import { BYTEPLUS_DEFAULT_MODEL_REF } from "./byteplus-models.js";
 
+const PLUGIN_ID = "@encircleacity2/byteplus-modelark";
 const PROVIDER_ID = "byteplus-modelark";
 
 export default definePluginEntry({
-  id: PROVIDER_ID,
+  id: PLUGIN_ID,
   name: "BytePlus ModelArk",
   description: "BytePlus ModelArk model provider plugin",
   register(api) {
