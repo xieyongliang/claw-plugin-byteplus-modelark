@@ -40,7 +40,7 @@ export BYTEPLUS_API_KEY=your_api_key_here
 **CLI flag:**
 
 ```sh
-openclaw --byteplus-api-key <key>
+openclaw --byteplus-modelark-api-key <key>
 ```
 
 **Onboarding wizard:**

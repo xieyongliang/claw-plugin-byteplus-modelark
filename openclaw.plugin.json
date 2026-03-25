@@ -14,8 +14,8 @@
       "groupLabel": "BytePlus ModelArk",
       "groupHint": "API key",
       "optionKey": "byteplusModelarkApiKey",
-      "cliFlag": "--byteplus-api-key",
-      "cliOption": "--byteplus-api-key <key>",
+      "cliFlag": "--byteplus-modelark-api-key",
+      "cliOption": "--byteplus-modelark-api-key <key>",
       "cliDescription": "BytePlus ModelArk API key"
     }
   ],

@@ -24,7 +24,7 @@ export default definePluginEntry({
           label: "BytePlus ModelArk API key",
           hint: "API key from your BytePlus ModelArk console",
           optionKey: "byteplusModelarkApiKey",
-          flagName: "--byteplus-api-key",
+          flagName: "--byteplus-modelark-api-key",
           envVar: "BYTEPLUS_API_KEY",
           promptMessage: "Enter your BytePlus ModelArk API key",
           defaultModel: BYTEPLUS_DEFAULT_MODEL_REF,
