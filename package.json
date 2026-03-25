@@ -1,0 +1,16 @@
+{
+  "name": "@encircleacity2/byteplus-modelark",
+  "version": "2026.3.25",
+  "description": "BytePlus ModelArk model provider plugin",
+  "type": "module",
+  "openclaw": {
+    "extensions": ["./index.ts"],
+    "providers": ["byteplus", "byteplus-plan"]
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026"
+  },
+  "devDependencies": {
+    "openclaw": "*"
+  }
+}
