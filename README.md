@@ -6,7 +6,7 @@ An [OpenClaw](https://github.com/openclaw/openclaw) plugin that adds [BytePlus M
 
 | Provider ID | Endpoint | Description |
 |---|---|---|
-| `byteplus` | `ark.ap-southeast.bytepluses.com/api/v3` | General-purpose models (Seed 1.8, Kimi K2.5, GLM 4.7) |
+| `byteplus` | `ark.ap-southeast.bytepluses.com/api/v3` | General-purpose models (Seed 2.0 Pro, Seed 2.0 Lite, Seed 1.8, Kimi K2.5, GLM 4.7) |
 | `byteplus-plan` | `ark.ap-southeast.bytepluses.com/api/coding/v3` | Coding plan models (Ark Code Latest) |
 
 Both providers are registered from a single `BYTEPLUS_API_KEY`.
