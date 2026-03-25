@@ -1,4 +1,4 @@
-# @encircleacity2/byteplus-modelark
+# byteplus-modelark
 
 An [OpenClaw](https://github.com/openclaw/openclaw) plugin that adds [BytePlus ModelArk](https://www.byteplus.com/en/product/modelark) as a model provider.
 
