@@ -31,24 +31,21 @@ Both providers are registered from a single `BYTEPLUS_API_KEY`.
 
 ## Setup
 
-**Environment variable:**
+**1. Install the plugin:**
 
 ```sh
-export BYTEPLUS_API_KEY=your_api_key_here
+openclaw plugins install @encircleacity2/byteplus-modelark
 ```
 
-**CLI flag:**
-
-```sh
-openclaw --byteplus-modelark-api-key <key>
-```
-
-**Onboarding wizard:**
+**2. Run the onboarding wizard and enter your API key when prompted:**
 
 ```sh
 openclaw onboard
-# Select "BytePlus ModelArk API key" when prompted
+# Select "BytePlus ModelArk" as your provider
+# Select "BytePlus ModelArk API key" and enter your key
 ```
+
+You can obtain an API key from the [BytePlus ModelArk console](https://console.byteplus.com/ark).
 
 ## Default model
 
