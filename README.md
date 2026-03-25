@@ -17,6 +17,8 @@ Both providers are registered from a single `BYTEPLUS_API_KEY`.
 
 | Model ID | Name | Input | Context | Max Tokens |
 |---|---|---|---|---|
+| `seed-2-0-pro-260328` | Seed 2.0 Pro | text, image | 256 000 | 8 192 |
+| `seed-2-0-lite-260228` | Seed 2.0 Lite | text, image | 256 000 | 4 096 |
 | `seed-1-8-251228` | Seed 1.8 | text, image | 256 000 | 4 096 |
 | `kimi-k2-5` | Kimi K2.5 | text | 131 072 | 16 384 |
 | `glm-4-7` | GLM 4.7 | text, image | 128 000 | 8 192 |
@@ -50,7 +52,7 @@ openclaw onboard
 
 ## Default model
 
-`byteplus-plan/ark-code-latest`
+`byteplus/seed-2-0-pro-260328`
 
 ## Files
 

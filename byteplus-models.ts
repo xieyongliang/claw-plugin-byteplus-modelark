@@ -15,7 +15,7 @@ export const BYTEPLUS_CODING_BASE_URL =
 
 // ─── Default model refs ───────────────────────────────────────────────────────
 
-export const BYTEPLUS_DEFAULT_MODEL_ID = "seed-1-8-251228";
+export const BYTEPLUS_DEFAULT_MODEL_ID = "seed-2-0-pro-260328";
 export const BYTEPLUS_CODING_DEFAULT_MODEL_ID = "ark-code-latest";
 export const BYTEPLUS_DEFAULT_MODEL_REF = `byteplus/${BYTEPLUS_DEFAULT_MODEL_ID}`;
 export const BYTEPLUS_CODING_DEFAULT_MODEL_REF = `byteplus-plan/${BYTEPLUS_CODING_DEFAULT_MODEL_ID}`;
@@ -39,6 +39,24 @@ export const BYTEPLUS_DEFAULT_COST = {
  * Volcengine entries (Kimi K2.5, GLM 4.7) that BytePlus ARK also exposes.
  */
 export const BYTEPLUS_MODEL_CATALOG = [
+  {
+    id: "seed-2-0-pro-260328",
+    name: "Seed 2.0 Pro",
+    reasoning: false,
+    input: ["text", "image"] as ["text", "image"],
+    cost: BYTEPLUS_DEFAULT_COST,
+    contextWindow: 256_000,
+    maxTokens: 8_192,
+  },
+  {
+    id: "seed-2-0-lite-260228",
+    name: "Seed 2.0 Lite",
+    reasoning: false,
+    input: ["text", "image"] as ["text", "image"],
+    cost: BYTEPLUS_DEFAULT_COST,
+    contextWindow: 256_000,
+    maxTokens: 4_096,
+  },
   {
     id: "seed-1-8-251228",
     name: "Seed 1.8",
