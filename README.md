@@ -31,19 +31,13 @@ Both providers are registered from a single `BYTEPLUS_API_KEY`.
 
 ## Setup
 
-**1. Clone this repository:**
+**1. Install the plugin:**
 
 ```sh
-git clone https://github.com/encircleacity2/claw-plugin-byteplus-modelark.git
+openclaw plugins install byteplus-modelark
 ```
 
-**2. Install the plugin from the local folder:**
-
-```sh
-openclaw plugins install ./claw-plugin-byteplus-modelark
-```
-
-**3. Run the onboarding wizard and enter your API key when prompted:**
+**2. Run the onboarding wizard and enter your API key when prompted:**
 
 ```sh
 openclaw onboard
