@@ -6,14 +6,14 @@ An [OpenClaw](https://github.com/openclaw/openclaw) plugin that adds [BytePlus M
 
 | Provider ID | Endpoint | Description |
 |---|---|---|
-| `byteplus` | `ark.ap-southeast.bytepluses.com/api/v3` | General-purpose models (Seed 2.0 Pro, Seed 2.0 Lite, Seed 1.8, Kimi K2.5, GLM 4.7) |
-| `byteplus-plan` | `ark.ap-southeast.bytepluses.com/api/coding/v3` | Coding plan models (Ark Code Latest) |
+| `byteplus-modelark` | `ark.ap-southeast.bytepluses.com/api/v3` | General-purpose models (Seed 2.0 Pro, Seed 2.0 Lite, Seed 1.8, Kimi K2.5, GLM 4.7) |
+| `byteplus-modelark-plan` | `ark.ap-southeast.bytepluses.com/api/coding/v3` | Coding plan models (Ark Code Latest) |
 
 Both providers are registered from a single `BYTEPLUS_API_KEY`.
 
 ## Models
 
-### `byteplus` (general)
+### `byteplus-modelark` (general)
 
 | Model ID | Name | Input | Context | Max Tokens |
 |---|---|---|---|---|
@@ -23,7 +23,7 @@ Both providers are registered from a single `BYTEPLUS_API_KEY`.
 | `kimi-k2-5` | Kimi K2.5 | text | 131 072 | 16 384 |
 | `glm-4-7` | GLM 4.7 | text, image | 128 000 | 8 192 |
 
-### `byteplus-plan` (coding)
+### `byteplus-modelark-plan` (coding)
 
 | Model ID | Name | Input | Context | Max Tokens |
 |---|---|---|---|---|
@@ -52,7 +52,7 @@ openclaw onboard
 
 ## Default model
 
-`byteplus/seed-2-0-pro-260328`
+`byteplus-modelark/seed-2-0-pro-260328`
 
 ## Files
 

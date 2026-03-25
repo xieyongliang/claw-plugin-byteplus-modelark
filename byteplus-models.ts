@@ -17,8 +17,8 @@ export const BYTEPLUS_CODING_BASE_URL =
 
 export const BYTEPLUS_DEFAULT_MODEL_ID = "seed-2-0-pro-260328";
 export const BYTEPLUS_CODING_DEFAULT_MODEL_ID = "ark-code-latest";
-export const BYTEPLUS_DEFAULT_MODEL_REF = `byteplus/${BYTEPLUS_DEFAULT_MODEL_ID}`;
-export const BYTEPLUS_CODING_DEFAULT_MODEL_REF = `byteplus-plan/${BYTEPLUS_CODING_DEFAULT_MODEL_ID}`;
+export const BYTEPLUS_DEFAULT_MODEL_REF = `byteplus-modelark/${BYTEPLUS_DEFAULT_MODEL_ID}`;
+export const BYTEPLUS_CODING_DEFAULT_MODEL_REF = `byteplus-modelark-plan/${BYTEPLUS_CODING_DEFAULT_MODEL_ID}`;
 
 // ─── Pricing ──────────────────────────────────────────────────────────────────
 

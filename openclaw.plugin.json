@@ -1,22 +1,22 @@
 {
   "id": "byteplus-modelark",
-  "providers": ["byteplus", "byteplus-plan"],
+  "providers": ["byteplus-modelark", "byteplus-modelark-plan"],
   "providerAuthEnvVars": {
-    "byteplus": ["BYTEPLUS_API_KEY"]
+    "byteplus-modelark": ["BYTEPLUS_API_KEY"]
   },
   "providerAuthChoices": [
     {
-      "provider": "byteplus",
+      "provider": "byteplus-modelark",
       "method": "api-key",
       "choiceId": "byteplus-modelark-api-key",
       "choiceLabel": "BytePlus ModelArk API key",
       "groupId": "byteplus-modelark",
       "groupLabel": "BytePlus ModelArk",
       "groupHint": "API key",
-      "optionKey": "byteplusApiKey",
+      "optionKey": "byteplusModelarkApiKey",
       "cliFlag": "--byteplus-api-key",
       "cliOption": "--byteplus-api-key <key>",
-      "cliDescription": "BytePlus API key"
+      "cliDescription": "BytePlus ModelArk API key"
     }
   ],
   "configSchema": {
