@@ -48,9 +48,14 @@ export default definePluginEntry({
       prepareExtraParams: (ctx) => {
         const params: Record<string, unknown> = { ...ctx.extraParams };
 
-        // Only apply thinking params for models that support deep thinking
+        // Only apply Seed-specific params for models that support deep thinking
         if (!REASONING_MODEL_IDS.has(ctx.modelId)) {
           return params;
+        }
+
+        // service_tier: use TPM guarantee packages when available (Seed-specific)
+        if (!params.service_tier) {
+          params.service_tier = "auto";
         }
 
         if (ctx.thinkingLevel == null || ctx.thinkingLevel === "off") {
@@ -67,6 +72,12 @@ export default definePluginEntry({
           if (!params.thinking) params.thinking = { type: "enabled" };
           if (!params.reasoning_effort) {
             params.reasoning_effort = effortMap[ctx.thinkingLevel] ?? "medium";
+          }
+          // max_completion_tokens controls total output (response + CoT).
+          // When set, remove max_tokens to avoid the two being sent together
+          // (the API rejects requests that include both).
+          if (params.max_completion_tokens) {
+            delete params.max_tokens;
           }
         }
 
