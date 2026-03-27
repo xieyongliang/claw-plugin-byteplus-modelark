@@ -42,29 +42,41 @@ export const BYTEPLUS_MODEL_CATALOG = [
   {
     id: "seed-2-0-pro-260328",
     name: "Seed 2.0 Pro",
-    reasoning: false,
+    reasoning: true,
     input: ["text", "image"] as ["text", "image"],
     cost: BYTEPLUS_DEFAULT_COST,
     contextWindow: 256_000,
     maxTokens: 8_192,
+    compat: {
+      supportsReasoningEffort: true,
+      supportsUsageInStreaming: true,
+    },
   },
   {
     id: "seed-2-0-lite-260228",
     name: "Seed 2.0 Lite",
-    reasoning: false,
+    reasoning: true,
     input: ["text", "image"] as ["text", "image"],
     cost: BYTEPLUS_DEFAULT_COST,
     contextWindow: 256_000,
     maxTokens: 4_096,
+    compat: {
+      supportsReasoningEffort: true,
+      supportsUsageInStreaming: true,
+    },
   },
   {
     id: "seed-1-8-251228",
     name: "Seed 1.8",
-    reasoning: false,
+    reasoning: true,
     input: ["text", "image"] as ["text", "image"],
     cost: BYTEPLUS_DEFAULT_COST,
     contextWindow: 256_000,
     maxTokens: 4_096,
+    compat: {
+      supportsReasoningEffort: true,
+      supportsUsageInStreaming: true,
+    },
   },
   {
     // VOLC_MODEL_KIMI_K2_5
@@ -75,6 +87,10 @@ export const BYTEPLUS_MODEL_CATALOG = [
     cost: BYTEPLUS_DEFAULT_COST,
     contextWindow: 131_072,
     maxTokens: 16_384,
+    compat: {
+      supportsReasoningEffort: true,
+      supportsUsageInStreaming: true,
+    },
   },
   {
     // VOLC_MODEL_GLM_4_7
@@ -109,3 +125,11 @@ export const BYTEPLUS_CODING_MODEL_CATALOG = [
 export type BytePlusCatalogEntry = (typeof BYTEPLUS_MODEL_CATALOG)[number];
 export type BytePlusCodingCatalogEntry =
   (typeof BYTEPLUS_CODING_MODEL_CATALOG)[number];
+
+/** Model IDs that support Seed deep thinking (thinking + reasoning_effort params). */
+export const REASONING_MODEL_IDS = new Set<string>([
+  "seed-2-0-pro-260328",
+  "seed-2-0-lite-260228",
+  "seed-1-8-251228",
+  "kimi-k2-5",
+]);

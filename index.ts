@@ -2,7 +2,7 @@ import { definePluginEntry } from "openclaw/plugin-sdk/plugin-entry";
 import { createProviderApiKeyAuthMethod } from "openclaw/plugin-sdk/provider-auth";
 import { ensureModelAllowlistEntry } from "openclaw/plugin-sdk/provider-onboard";
 import { buildBytePlusCodingProvider, buildBytePlusProvider } from "./provider-catalog.js";
-import { BYTEPLUS_DEFAULT_MODEL_REF } from "./byteplus-models.js";
+import { BYTEPLUS_DEFAULT_MODEL_REF, REASONING_MODEL_IDS } from "./byteplus-models.js";
 
 const PLUGIN_ID = "@encircleacity2/byteplus-modelark";
 const PROVIDER_ID = "byteplus-modelark";
@@ -44,6 +44,34 @@ export default definePluginEntry({
           },
         }),
       ],
+
+      prepareExtraParams: (ctx) => {
+        const params: Record<string, unknown> = { ...ctx.extraParams };
+
+        // Only apply thinking params for models that support deep thinking
+        if (!REASONING_MODEL_IDS.has(ctx.modelId)) {
+          return params;
+        }
+
+        if (ctx.thinkingLevel == null || ctx.thinkingLevel === "off") {
+          // Explicitly disable thinking
+          if (!params.thinking) params.thinking = { type: "disabled" };
+          if (!params.reasoning_effort) params.reasoning_effort = "minimal";
+        } else {
+          // Map OpenClaw thinking level → Seed reasoning_effort
+          const effortMap: Record<string, string> = {
+            low: "low",
+            medium: "medium",
+            high: "high",
+          };
+          if (!params.thinking) params.thinking = { type: "enabled" };
+          if (!params.reasoning_effort) {
+            params.reasoning_effort = effortMap[ctx.thinkingLevel] ?? "medium";
+          }
+        }
+
+        return params;
+      },
 
       catalog: {
         // "paired" so both byteplus-modelark and byteplus-modelark-plan are
